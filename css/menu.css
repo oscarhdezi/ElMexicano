@@ -1,0 +1,29 @@
+/****************************/
+/*******   M E N U   ********/
+/****************************/
+.menuholder { background:url(../images/menu.png) no-repeat;} /*opcional*/
+.menuholder li {float:left; margin: 2px;}
+.menuholder a {background:url(../images/menu.png);display:block; height:35px; text-indent:-9000%}
+/*ESTADO NORMAL*/
+.menu_inicio a {width:68px;}
+.menu_conocenos a {width:106px; background-position:-70px 0px;}
+.menu_especialidades a {width:124px; background-position:-180px 0px;}
+.menu_menu a {width:60px; background-position:-302px 0px;}
+.menu_servicios a {width:75px; background-position:-366px 0px;}
+.menu_salones a {width:168px; background-position:-448px 0px;}
+
+/*ESTADO ROLLOVER*/
+.menu_inicio a:hover {background-position:0px -40px;}
+.menu_conocenos a:hover{background-position:-70px -40px;}
+.menu_especialidades a:hover {background-position:-180px -40px;}
+.menu_menu a:hover {background-position:-302px -40px;}
+.menu_servicios a:hover {background-position:-364px -40px;}
+.menu_salones a:hover {background-position:-447px -40px;}
+
+/*ESTADO ACTIVO*/
+.menu_inicio a.active {background-position:0px -54px;}
+.menu_conocenos a.active {background-position:-175px -53px;}
+.menu_especialidades a.active {background-position:-330px -53px;}
+.menu_menu a.active {background-position:-500px -53px;}
+.menu_servicios a.active {background-position:-623px -53px;}
+.menu_salones a.active {background-position:-720px -53px;}
