@@ -5,29 +5,30 @@ html(lang="es")
 		meta(description="Restaurant El Mexicano")
 		title Restaurante El Mexicano
 		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/menu.css")
 		link(rel="stylesheet", href="css/normalize.css")
-		link(href="http://fonts.googleapis.com/css?family=Sanchez")
+		link(href='http://fonts.googleapis.com/css?family=BenchNine', rel='stylesheet', type='text/css')
 		script(src="js/modernizr.custom.50041.js")
 	body
 		#main
 			header
 				#logotipo
+					a(href="#")
+						img(src="images/restaurante-el-mexicano.png", alt="El Mexicano",width="100%")
 				nav
-					ul
-						li
+					ul.menuholder
+						li.menu_inicio
 							a(href="#") INICIO
-						li
+						li.menu_conocenos
 							a(href="#") CONOCENOS
-						li
-							a(href="#") SERVICIOS
-						li
-							a(href="#") MENU
-						li
+						li.menu_especialidades
 							a(href="#") ESPECIALIDADES
-						li
-							a(href="#") COMO LLEGAR
-						li
-							a(href="#") CONTACTO
+						li.menu_menu
+							a(href="#") MENU
+						li.menu_servicios
+							a(href="#") SERVICIOS
+						li.menu_salones
+							a(href="#") SALONES BUGAMBILIAS
 			#galeriaPromociones
 				#galeria
 				#promociones
