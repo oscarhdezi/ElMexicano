@@ -1,0 +1,50 @@
+<?php	require 'controllers/master.php'; $web=new master();?>
+!!!5
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		meta(description="Servicios que ofrecemos en El Restaurant El Mexicano")
+		title Contactanos | Restaurante El Mexicano
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/menu.css")
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel='stylesheet', id='camera-css', href='css/camera.css', media='all')
+		link(href='http://fonts.googleapis.com/css?family=BenchNine|Ubuntu+Condensed', rel='stylesheet', type='text/css')
+		script(src="js/modernizr.custom.50041.js")
+	body
+		#main
+			header
+				#logotipo
+					a(href="#")
+						img(src="images/restaurante-el-mexicano.png", alt="El Mexicano",width="100%")
+				nav
+					<?php $web->menu(); ?>
+			#galeriaPromociones.madera
+				img(src="images/contacto-resturante.jpg", alt="Resturantes en Ixmiquilpan", width="100%")
+			#descripcion
+				#textos
+					form#myForm(name="myForm")
+						label(for="Nombre") Nombre:
+						input#nombre(type="text", name="nombre")
+						label(for="Ciudad") Ciudad:
+						input#ciudad(type="text",name="ciudad")
+						label(for="mail") Correo:
+						input#mail(type="mail", name="mail")
+						label(for="Comentario") Comentario:
+						textarea#comentario(rows="5", cols="40",name="comentario")
+						br
+						input#enviar(type="submit", value="ENVIAR")
+				#fotosMenu
+					article#menuDos
+						a(href="ubicacion.php").ubicacion Ubicación
+						a(href="contacto.php").contacto Contacto
+					#fotoFachada
+						img(src="fotos/el-mexicano-restaurante-hidalgo.jpg", alt="El Mexicano", width="410")
+					#respuesta
+			footer
+				<?php	$web->footer();?>
+			#clear
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+		script(src="http://html5form.googlecode.com/svn/trunk/jquery.html5form-1.5-min.js")
+		script
+			$(document).ready(function(){$('#myForm').html5form({method : 'POST',action : 'controllers/mail.php',emptyMessage : 'Este campo es obligatorio',emailMessage : 'La dirección de correo ingresada es incorrecta',responseDiv : '#respuesta'});});

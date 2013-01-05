@@ -1,0 +1,73 @@
+<?php	require 'controllers/master.php'; $web=new master();?>
+!!!5
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		meta(description="Restaurant El Mexicano")
+		title Conocenos | Restaurante El Mexicano
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/menu.css")
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel='stylesheet', id='camera-css', href='css/camera.css', media='all')
+		link(href='http://fonts.googleapis.com/css?family=BenchNine|Ubuntu+Condensed', rel='stylesheet', type='text/css')
+		script(src="js/modernizr.custom.50041.js")
+		script(src="js/jquery.min.js")
+		script
+			$(function(){$("#slider1").responsiveSlides({timeout: 4000}); $("#slider2").responsiveSlides({timeout: 8000}); $("#slider3").responsiveSlides({timeout: 10000}); $("#slider4").responsiveSlides({timeout: 6000});});
+		script(src="js/jquery.mobile.customized.min.js")
+		script(src="js/jquery.easing.1.3.js")
+		script(src="js/camera.js")
+		script jQuery(function(){jQuery('#camera_wrap_2').camera({pagination: true,thumbnails: true,imagePath: 'fotos/'});});
+	body
+		#main
+			header
+				#logotipo
+					a(href="#")
+						img(src="images/restaurante-el-mexicano.png", alt="El Mexicano",width="100%")
+				nav
+					<?php $web->menu(); ?>
+			#galeriaPromociones.madera
+				img(src="images/restaurantes-hidalgo.jpg", alt="Resturantes en Ixmiquilpan", width="100%")
+			#descripcion
+				#textos
+					h3 MISIÓN
+					p
+						| En restaurant “El Mexicano”, nos dedicamos a preparar alimentos y bebidas de calidad atendiendo las necesidades de nuestros clientes mediante un servicio de calidad y atención personalizada que asegure su satisfacción.
+					h3 VISIÓN
+					p
+						| Tener el liderazgo en el mercado y nichos que atendemos. Buscar oportunidades de desarrollo. Sinergia con los clientes, proveedores y empleados para lograr el crecimiento en participación del mercado, eficiencia de la operación y utilidades  sanas.
+					h3 VALORES
+					ul
+						li
+							p
+								|  Honestidad
+						li
+							p
+								| Responsabilidad
+						li
+							p
+								| Respeto
+						li
+							p
+								| Lealtad
+						li
+							p
+								| Compromiso
+						li
+							p
+								| Trabajo en Equipo
+				#fotosMenu
+					#menuDos
+						a(href="ubicacion.php").ubicacion Ubicación
+						a(href="contacto.php").contacto Contacto
+					.fluid_container
+						.camera_wrap.camera_azure_skin#camera_wrap_2
+							div(data-thumb="fotos/conocenos-restaurante-1s.jpg", data-src="fotos/conocenos-restaurante-1.jpg")
+							div(data-thumb="fotos/conocenos-restaurante-2s.jpg", data-src="fotos/conocenos-restaurante-2.jpg")
+							div(data-thumb="fotos/conocenos-restaurante-3s.jpg", data-src="fotos/conocenos-restaurante-3.jpg")
+							div(data-thumb="fotos/conocenos-restaurante-4s.jpg", data-src="fotos/conocenos-restaurante-4.jpg")
+							div(data-thumb="fotos/conocenos-restaurante-5s.jpg", data-src="fotos/conocenos-restaurante-5.jpg")
+							div(data-thumb="fotos/conocenos-restaurante-6s.jpg", data-src="fotos/conocenos-restaurante-6.jpg")
+			footer
+				<?php	$web->footer();?>
+			#clear

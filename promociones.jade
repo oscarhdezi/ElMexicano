@@ -1,0 +1,29 @@
+<?php	require 'controllers/master.php'; $web=new master();?>
+!!!5
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		meta(description="Servicios que ofrecemos en El Restaurant El Mexicano")
+		title Promociones | Restaurante El Mexicano
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/menu.css")
+		link(rel="stylesheet", href="css/normalize.css")
+		link(rel='stylesheet', id='camera-css', href='css/camera.css', media='all')
+		link(href='http://fonts.googleapis.com/css?family=BenchNine|Ubuntu+Condensed', rel='stylesheet', type='text/css')
+		script(src="js/modernizr.custom.50041.js")
+	body
+		#main
+			header
+				#logotipo
+					a(href="#")
+						img(src="images/restaurante-el-mexicano.png", alt="El Mexicano",width="100%")
+				nav
+					<?php $web->menu(); ?>
+			#galeriaPromociones.madera
+				img(src="images/promociones-seccion.jpg", alt="Promociones Restaurantes en Ixmiquilpan", width="100%")
+			#descripcion
+				#contMap
+					img(src="images/descuentos.jpg",alt="Promociones de El Mexicano", width="100%")
+			footer
+				<?php	$web->footer();?>
+			#clear
